@@ -1,0 +1,422 @@
+/* Основные стили */
+:root {
+  --space-gradient: linear-gradient(4deg, #012f00, #000000);
+  --neon-cyan: #0ff;
+  --neon-purple: #b13dff;
+  --cyber-font: 'Orbitron', sans-serif;
+  --glow: 0 0 10px rgba(0, 255, 255, 0.8);
+}
+
+header {
+  text-align: center;
+  padding: 0px;
+  margin-top: 80px; /* Отступ от навигации */
+}
+
+header h1 {
+  font-size: 3rem;
+  color: var(--neon-cyan);
+  text-shadow: var(--glow);
+  margin-bottom: 20px;
+}
+
+header .subtitle {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.parallax-bg {
+  transition: transform 0.1s ease-out; /* Плавный переход */
+}
+
+.cta-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Отступ между кнопками */
+  margin-top: 20px;
+}
+
+.neon-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 1px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.neon-button:hover {
+  background: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 10px var(--neon-cyan),
+              0 0 20px var(--neon-cyan),
+              0 0 40px var(--neon-cyan);
+}
+
+body {
+  display: flex;
+  position: static;
+  background: var(--space-gradient);
+  font-family: var(--cyber-font);
+  color: #8463ff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Минимальная высота — весь экран */
+  overflow: auto;
+  flex-direction: column;
+  margin-top: auto
+}
+
+main {
+  display: block; /* Убираем flex, если он не нужен */
+  position: static;
+  z-index: 10;
+  padding: 20px;
+  padding-bottom: 50px;
+  flex: 1; /* Основной контент растягивается, чтобы занять всё доступное пространство */
+}
+
+#starfield {
+  position: absolute; /* Прокручиваемый фон */
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%; /* Покрывает всю высоту страницы */
+  z-index: 0; /* Убедитесь, что фон находится под контентом */
+  pointer-events: auto; /* Отключаем события мыши для canvas */
+}
+
+/* Стили для секции информации */
+.info-section {
+  padding-top: 80px; /* Отступ от навигации */
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px; /* Отступ между блоками */
+  margin-top: 30px;
+}
+
+.info-block {
+  background: rgba(10, 10, 46, 0.8);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.info-block:hover {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 10px var(--neon-cyan),
+              0 0 20px var(--neon-cyan),
+              0 0 40px var(--neon-cyan);
+}
+
+.info-block h3 {
+  color: var(--neon-cyan);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.info-block p, .info-block ul {
+  color: #fff;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.info-block ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-block ul li {
+  margin: 10px 0;
+}
+
+.info-block ul li::before {
+  content: '•';
+  color: var(--neon-cyan);
+  margin-right: 10px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Стили для кнопок соцсетей */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Отступ между кнопками */
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.neon-button {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 1px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.neon-button img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.neon-button.discord {
+  border-color: #7289DA; /* Цвет Discord */
+  color: #7289DA;
+}
+
+.neon-button.Instagram {
+  border-color: #FF1493; /* Цвет Discord */
+  color: #FF1493;
+}
+
+.neon-button.telegram {
+  border-color: #0088CC; /* Цвет Telegram */
+  color: #0088CC;
+}
+
+.neon-button.kickstarter {
+  border-color: #05CE78; /* Цвет Kickstarter */
+  color: #05CE78;
+}
+
+.neon-button:hover {
+  background: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 10px var(--neon-cyan),
+              0 0 20px var(--neon-cyan),
+              0 0 40px var(--neon-cyan);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+  background: rgba(10, 10, 46, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+/* Навигационное меню */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(10, 10, 46, 0.7);
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  text-shadow: var(--glow);
+}
+
+/* Заголовок "О нас" с полоской */
+.about-section h2 {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center; /* Центрируем заголовок */
+}
+
+.about-section h2::after {
+  content: '';
+  position: absolute;
+  left: 45%;
+  bottom: 3;
+  width: 0%; /* Полоска занимает половину ширины */
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--neon-cyan), transparent);
+  transform: translateX(50%); /* Центрируем полоску */
+  animation: scanline 50s linear infinite;
+}
+
+@keyframes scanline {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Отступ для плашки "О нас" */
+.about-section {
+  padding-top: 80px; /* Опускаем плашку ниже навигации */
+}
+
+/* Карточки команды */
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 122px; /* Отступ между карточками */
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.team-card {
+  width: 250px;
+  height: 350px;
+  perspective: 1000px;
+}
+
+.team-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.team-card:hover .team-card-inner {
+  transform: rotateY(180deg);
+}
+
+.team-card-front, .team-card-back {
+  width: 84%;
+  height: 88%;
+  position: absolute;
+  backface-visibility: hidden;
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  border-radius: 1px;
+  background: rgba(10, 10, 46, 0.8);
+  padding: 20px;
+  text-align: center;
+}
+
+.team-card-front img {
+  width: 100%;
+  max-width: 150px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.team-card-front h3 {
+  color: var(--neon-cyan);
+  margin: 10px 0;
+}
+
+.team-card-front p {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.team-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-card-back p {
+  color: #fff;
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+
+/* Футер */
+footer {
+  z-index: 15;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+}
+
+footer a {
+  color: var(--neon-cyan);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-shadow: var(--glow);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes hologram-scan {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Глитч-эффект */
+.glitch-container {
+  position: relative; /* Чтобы контейнер занимал только ширину текста */
+}
+
+
+
+.glitch-container h1::before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 2px 0 #ff00c1;
+  animation: glitch-1 2s infinite;
+}
+
+@keyframes glitch-1 {
+  0% { clip-path: inset(20% 0 30% 0); }
+  100% { clip-path: inset(10% 0 40% 0); }
+}
+
+/* Параллакс-эффект */
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lenotion | Главная</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/neon-effects.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body class="parallax-bg">
+
+  <!-- Звездный фон -->
+  <canvas id="starfield"></canvas>
+
+  <!-- Остальной контент -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html" class="neon-link">Главная</a></li>
+      <li><a href="about.html" class="neon-link">О нас</a></li>
+      <li><a href="info.html" class="neon-link">Информация</a></li>
+      <li><a href="contact.html" class="neon-link">Обратная связь</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <header class="glitch-container">
+      <h1 data-text="Lenotion">Frogrealms: Elemental Climb.</h1>
+      <p class="subtitle">Построй базу. Управляй стихиями. Выживай.</p>
+      
+      <!-- Голографический трейлер -->
+      <div class="hologram-banner">
+        <img autoplay muted loop class="hologram-video">
+          <img src="https://media1.tenor.com/m/ORtlW03h4XsAAAAC/stalin-stalin-greets.gif" alt="Пётр Петров">
+        </video>
+        <div class="scanline"></div>
+      </div>
+
+      <!-- Кнопки -->
+      <div class="cta-grid">
+        <a href="#" class="neon-button cyan" data-hover="ИНИЦИИРОВАТЬ ЗАГРУЗКУ">
+          <span class="gradient-text">Скачать</span>
+        </a>
+        <a href="info.html" class="neon-button purple" data-hover="ДОСТУП К ДОСЬЕ">
+          <span class="pulse">Информация</span>
+        </a>
+        <a href="contact.html" class="neon-button cyan" data-hover="Информация">
+          <span class="gradient-text">Контакты</span>
+        </a>
+        <a href="about.html" class="neon-button purple" data-hover="Информация">
+          <span class="pulse">О нас</span>
+        </a>
+      </div>
+    </header>
+  </main>
+
+  <!-- Футер -->
+  <footer>
+    <p>&copy; 2025 Frogrealms: Elemental Climb. Все права защищены.</p>
+    <div class="social-links">
+      <a href="#" class="social-icon" data-tooltip="Discord">
+        <img src="https://img.icons8.com/?size=100&id=61604&format=png&color=000000" alt="Discord">
+      </a>
+      <a href="#" class="social-icon" data-tooltip="Telegram">
+        <img src="https://img.icons8.com/?size=100&id=114954&format=png&color=000000" alt="Telegram">
+      </a>
+      <a href="#" class="social-icon" data-tooltip="Kickstarter">
+        <img src="https://img.icons8.com/?size=100&id=U43jkhY50D2d&format=png&color=000000" alt="Kickstarter">
+      </a>
+    </div>
+  </footer>
+
+  <script src="js/starfield.js"></script>
+  <script src="js/hologram-effect.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+/* Неоновые кнопки */
+.neon-button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  color: #8ef4ff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: 0.5s;
+}
+
+.neon-button.cyan {
+border-image: linear-gradient(135deg, #ffe800, #d800ff) 1;
+}
+
+.neon-button.purple {
+  border-image: linear-gradient(135deg, #b13dff, #ff00c1) 1;
+}
+
+.neon-button:hover {
+  background: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.4),
+              0 0 20px rgba(0, 255, 255, 0.4),
+              0 0 40px rgba(0, 255, 255, 0.4);
+}
+
+/* Неоновый текст */
+.gradient-text {
+  background: linear-gradient(135deg, #0ff, #00bfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Свечение для иконок */
+.social-icon {
+  display: inline-block;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
+}
+
+/* Голографический эффект */
+.hologram-banner {
+  position: relative;
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 50px rgba(0, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.hologram-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+  animation: hologram-scan 4s linear infinite;
+}
+
+@keyframes hologram-scan {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
